@@ -57,7 +57,7 @@ app.post('/', upload.single('image'), (req, res) => {
     });
 });
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 mongoose.connect(
   "mongodb+srv://anshuman:koADCE2VduNBNJgn@anshuman.jh6tpic.mongodb.net/galleryApp?retryWrites=true&w=majority"
