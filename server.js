@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 app.post('/', upload.single('image'), (req, res) => {
     var saveImage = {
         image: {
-            data: fs.readFileSync(path.join(__dirname + './uploads/' + req.file.filename)),
+            data: fs.readFileSync(path.join('./uploads/' + req.file.filename)),
             contentType: 'image/png'
         }
     }
